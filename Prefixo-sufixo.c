@@ -30,18 +30,13 @@ void prefixo(char *resp, int tam) {
 	}
 }
 
-void sufixo(char *resp, int tam) {
+void sufixo(char *resp) {
 	printf("\n==========SUFIXOS===========\n");
 	printf("\t%s\n", resp);
 	
-	int i, j, k = 0;
-	for(i = tam-1; i >= 0; i--) {
-		
-		printf("%dº -> ", ++k);
-		
-		for(j = tam-1; j >= i; j--){
-			printf("%c", *(resp + j));
-		}
+	int i, tam = strlen(resp);
+	for(i = 0; i < tam; i++){
+		printf("%s\n", resp + i);
+	}
 		printf("\n");
 	}
-}
